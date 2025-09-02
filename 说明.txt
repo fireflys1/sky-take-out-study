@@ -1,0 +1,21 @@
+微信小程序使用了redis技术
+版本是Redis_3.2.100
+使用时下载后去到对应的文件夹 cmd 然后   redis-server.exe redis.windows.conf  启动文件
+数据库版本为MySQL_8.0.34  配置好后可以资源管理器->服务->mysql启动服务来启动,或者 控制台 net start mysql 启动
+vue版本为2.x版本的
+使用的jdk为11,springboot版本为2.7.3
+
+启动项目
+java端  sky-take-out
+选择sky-take-out/pom.xml文件右键然后看最下面点maven,在点加载项目即可
+vue端  sky-take-out-front-main
+需要确保node_modules文件无误东西都在,然后去到项目路径下cmd打开控制台输入code . 打开vscode选择NPM脚本点击serve 启动项目,
+或者在当前项目路径下cmd打开控制台输入   npm run serve  命令来启动项目
+微信小程序端  mp-weixin
+打开微信小程序,选择导入项目选择指定的项目导入,需要填写自己的微信小程序id 用自动生成的可能会出问题
+
+vue端和java端的  路径使用的反向代理
+比如请求路径为http://localhost:8888/api/dish/page 后端实际路径为  http://localhost:8888/admin/dish/page
+相当于将api进行了替换替换为了admin
+java端的
+application.yml 配置类需要根据自己的信息进行配置,配置正确才可以启动
